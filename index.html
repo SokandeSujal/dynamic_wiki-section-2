@@ -1,0 +1,94 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Company Information Card</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="search-container">
+        <input
+          type="text"
+          id="companySearch"
+          placeholder="Enter company name..."
+        />
+        <button onclick="searchCompany()">Search</button>
+      </div>
+
+      <div id="loader" class="loader" style="display: none">
+        <div class="spinner"></div>
+      </div>
+
+      <div id="companyCard" class="company-card" style="display: none">
+        <!-- Logo and Name -->
+        <div class="company-header">
+          <img id="companyLogo" class="company-logo" alt="Company Logo" />
+          <h2 id="companyName"></h2>
+        </div>
+
+        <!-- Leadership -->
+        <div class="section">
+          <h3>Leadership Team</h3>
+          <div id="leadershipTeam" class="leadership-container"></div>
+        </div>
+
+        <!-- Company Info -->
+        <div class="section">
+          <div class="info-grid">
+            <div class="info-item">
+              <span class="label">Industry</span>
+              <span id="industry" class="value"></span>
+            </div>
+            <div class="info-item">
+              <span class="label">Products/Services</span>
+              <span id="products" class="value"></span>
+            </div>
+            <div class="info-item">
+              <span class="label">Employees</span>
+              <span id="employees" class="value"></span>
+            </div>
+            <div class="info-item">
+              <span class="label">Headquarters</span>
+              <span id="headquarters" class="value"></span>
+            </div>
+            <div class="info-item">
+              <span class="label">Established</span>
+              <span id="established" class="value"></span>
+            </div>
+            <div class="info-item">
+              <span class="label">SEC CIK</span>
+              <span id="secCik" class="value"></span>
+            </div>
+            <div class="info-item">
+              <span class="label">Revenue</span>
+              <span id="revenue" class="value"></span>
+            </div>
+            <div class="info-item">
+              <span class="label">Stock Symbol</span>
+              <span id="stockSymbol" class="value"></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Social Media -->
+        <div class="section">
+          <div class="social-links" id="socialLinks">
+            <!-- Social media icons will be added here -->
+          </div>
+          <a id="companyUrl" class="company-url" target="_blank"></a>
+        </div>
+      </div>
+
+      <div id="error" class="error" style="display: none"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
